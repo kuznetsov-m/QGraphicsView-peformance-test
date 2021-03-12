@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>979</width>
+    <height>457</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,10">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Количество объектов:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSpinBox" name="sbItemCount">
+       <property name="maximum">
+        <number>100000</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="value">
+        <number>1000</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Количество точек в объекте:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="sbItemPointCount">
+       <property name="maximum">
+        <number>100000</number>
+       </property>
+       <property name="value">
+        <number>4</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Максимальный размер объекта:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QSpinBox" name="sbItemMaxSize">
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>20</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>QGraphicsItem::CacheMode:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="cbGraphicsItemCacheMode"/>
+     </item>
+     <item row="4" column="0" colspan="2">
+      <widget class="QPushButton" name="pbCreate">
+       <property name="text">
+        <string>Создать</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QPushButton" name="pbClear">
+       <property name="text">
+        <string>Очистить</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="2">
+      <widget class="QPushButton" name="pb1">
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGraphicsView" name="graphicsView"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
