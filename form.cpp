@@ -9,6 +9,7 @@
 #include <QList>
 #include <QObject>
 #include <QMetaEnum>
+#include <QGraphicsItem>
 #include <time.h>
 
 Q_DECLARE_METATYPE(QGraphicsItem::CacheMode)
@@ -36,8 +37,11 @@ Form::~Form()
 
 void Form::on_pb1_clicked()
 {
-    auto graphicsPathItem = createGraphicsPathItem(QPointF(0,0), 4, 20, QGraphicsItem::CacheMode::NoCache);
-    graphicsScene->addItem(graphicsPathItem);
+//    auto graphicsPathItem = createGraphicsPathItem(QPointF(0,0), 4, 20, QGraphicsItem::CacheMode::NoCache);
+//    graphicsScene->addItem(graphicsPathItem);
+//----------------------
+    auto line = new QGraphicsLineItem(0, 0, 0, -100);
+    graphicsScene->addItem(line);
 }
 
 QGraphicsPathItem *Form::createGraphicsPathItem(const QPointF &pos,
@@ -111,4 +115,16 @@ int Form::randomValue(int min, int max)
 void Form::on_pbClear_clicked()
 {
     graphicsScene->clear();
+}
+
+void Form::on_pbScalePlus_clicked()
+{
+    //QTransform mat
+    //ui->graphicsView->setTransform();
+    ui->graphicsView->setTransform(ui->graphicsView->transform().scale(1.1, 1.1));
+}
+
+void Form::on_pbScaleMinus_clicked()
+{
+    ui->graphicsView->setTransform(ui->graphicsView->transform().scale(0.9, 0.9));
 }

@@ -24,6 +24,10 @@ private slots:
 
     void on_pbClear_clicked();
 
+    void on_pbScalePlus_clicked();
+
+    void on_pbScaleMinus_clicked();
+
 private:
     Ui::Form *ui;
 
